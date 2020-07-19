@@ -14,7 +14,7 @@
         t.createdBy,
         t.updatedBy
         from t_coffee t
-        order by t.update_time desc
+        order by t.id asc
     </select>
 
     <select id="select" resultType="com.kangpan.model.Coffee" parameterType="com.kangpan.model.Coffee">
@@ -40,7 +40,7 @@
             AND t.state = #{state, jdbcType = INTEGER}
         </if>
         </where>
-        order by t.update_time desc
+        order by t.id asc
     </select>
 
     <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.kangpan.model.Coffee">

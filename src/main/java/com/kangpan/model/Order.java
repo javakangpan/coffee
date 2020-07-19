@@ -21,7 +21,6 @@ import java.io.Serializable;
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Order extends BaseEntity implements Serializable {
-    private String orderId;
     private Customer customer;
     // 已支付 未支付 取消支付
     private int state;

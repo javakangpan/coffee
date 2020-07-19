@@ -14,4 +14,6 @@ public interface CoffeeService {
     int batchInsert(List<Coffee> items);
     int batchDelete(long[] ids);
     int batchUpdate(List<Coffee> items);
+    int update();
+    int normal();
 }
