@@ -9,6 +9,15 @@
         <module name="coffee" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="kp-rpc" target="1.5" />
+      <module name="rpc-client" target="1.5" />
+      <module name="rpc-common" target="1.5" />
+      <module name="rpccodec" target="1.5" />
+      <module name="rpcproto" target="1.5" />
+      <module name="rpcserver" target="1.5" />
+      <module name="rpctansport" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kangpan.mapper.CustomerMapper">
+    <select id="findCustomerByName" parameterType="java.lang.String" resultType="com.kangpan.model.Customer">
+        select * from t_customer where 1 = 1
+        <choose>
+            <when test="customerName != null and customerName != ''">
+                and userName = #{customerName,jdbcType=VARCHAR}
+            </when>
+            <otherwise>
+                and userName = '-1'
+            </otherwise>
+        </choose>
+    </select>
+</mapper>
